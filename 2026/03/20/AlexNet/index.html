@@ -78,7 +78,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2026/03/19/yolo增加模块的方式/"/>
+    <link rel="canonical" href="http://example.com/2026/03/20/alexnet/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -87,16 +87,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YOLO增加模块的方式">
-<meta property="og:url" content="http://example.com/2026/03/19/YOLO%E5%A2%9E%E5%8A%A0%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:title" content="AlexNet">
+<meta property="og:url" content="http://example.com/2026/03/20/AlexNet/index.html">
 <meta property="og:site_name" content="立于皓月之边，不弱星光之势">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2026-03-19T12:24:59.000Z">
-<meta property="article:modified_time" content="2026-03-19T12:26:13.892Z">
+<meta property="article:published_time" content="2026-03-20T08:08:18.000Z">
+<meta property="article:modified_time" content="2026-03-20T08:11:01.587Z">
 <meta property="article:author" content="AxonoSensei">
-<meta property="article:tag" content="YOLO">
+<meta property="article:tag" content="深度学习入门">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -110,7 +110,7 @@
     
     <title>
         
-            YOLO增加模块的方式 | Blog
+            AlexNet | Blog
         
     </title>
 
@@ -299,7 +299,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">YOLO增加模块的方式</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">AlexNet</h1>
 			</div>
 			
 		</div>
@@ -320,15 +320,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2026-03-19 20:24:59</span>
-        <span class="mobile">2026-03-19 20:24:59</span>
+        <span class="desktop">2026-03-20 16:08:18</span>
+        <span class="mobile">2026-03-20 16:08:18</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2026-03-19 20:26:13</span>
-            <span class="mobile">2026-03-19 20:26:13</span>
+            <span class="desktop">2026-03-20 16:11:01</span>
+            <span class="mobile">2026-03-20 16:11:01</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -340,7 +340,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/YOLO/">YOLO</a>&nbsp;
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/">深度学习入门</a>&nbsp;
                     </li>
                 
             </ul>
@@ -366,130 +366,78 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>首先需要从官方的GitHub库内下载yolo的全部代码。</p>
-<p>这个就是官方的下载链接：<a class="link"   target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics" >Github仓库链接地址 <i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143430788.png"
-                      alt="image-20260318134534056"  
-                >
-<p>下载完毕之后，我们使用自己的编译器将整个代码进行打开，打开的是整个文件夹。现在假设文件夹的名称为**<em>ultralytics-main</em>。**在这个基础上进行路径的修改和说明</p>
-<h2 id="1-路径下重要文件说明"><strong>1.路径下重要文件说明</strong></h2>
-<h3 id="1-1-模型文件申明">1.1.模型文件申明</h3>
-<blockquote>
-<p>首先就是这整个文件夹中最重要的模型文件架构，官方的代码库中的模型文件，并不是保存成<code>python</code>文件，而是使用<code>yaml</code>文件进行保存的。</p>
+			<blockquote>
+<p><em>AlexNet</em>神经网络是美国学者<em>Alex Krizhevsky</em>于2012年在论文<em>ImageNet classification with deep convolutional neural networks</em>中提出的。</p>
+<p>该方法的提出在当时乃至现在都是具有里程碑意义的，他是当前卷积神经网络的基本范式，同时也是该网络开创了通过加深神经网络来实现精度的提升；也是它将非线性激活函数<em>ReLU</em>函数第一次提出并引入，同时采用了<em>DropOut</em>机制来防止出现过拟合的问题。是当时深度最深，计算量最大，模型参数最多的神经网络模型，并赢下了当时的<em>ImageNet</em>比赛。</p>
+<p>虽然模型的架构已经非常的老，但是仍然由很多值得学习的地方。</p>
 </blockquote>
-<p>其地址位于：<code>ultralytics-main\ultralytics\cfg\models</code></p>
+<h1>1 模型背景</h1>
+<p><em>1998</em>年<em>Tann LeCun</em>等人提出了卷积神经网络的奠基之作<em>LeNet-5</em>模型之后卷积神经网络就进入了历史的寒冬。大概整整10年都没有出现特别先进的思想特别厉害的算法来对卷积深度学习进行改进。直到斯坦福大学的教授李飞飞用了许多年的时间和他的同学们一起做成了当时最大最强的数据集<em>ImageNet</em>数据集并开源在网络之上，卷积神经网络又进入了一次新的热潮，其中最先跳脱而出的便是<em>AlexNet</em>。</p>
+<blockquote>
+<p><em>ImageNet</em>数据集有大概<em>1400</em>多万张图片， 超过<em>2</em>万多种分类，是当时最大的数据集，没有之一</p>
+</blockquote>
+<p>当时比较出名的卷积神经网路就是<em>LeNet-5</em>神经网络。如下图所示。然而该<em>LeNet-5</em>神经网络的训练精度在ImageNet上的过低。因此就需要尽可能的提升精度，但是现在的提升精度的方法并不多，人们只有猛拉深度这种办法了。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143432601.png"
-                      alt="image-20260318135230683"
+                     data-src="assets/3693258-20260118185750677-1827904293.png"
+                      alt="image-20260118185747907"
                 ></p>
-<p>上面这张图片就是<code>yolo11</code>模型的架构，现在将逐个说明相关的参数：</p>
-<ul>
-<li><code>nc</code>：表示类别的数量。该模型的主要用途是图像目标检测，nc的目的就是确定检测的数量多少</li>
-<li><code>scales</code>：表示模型的缩放系数。里面的模型架构从小到大包括了<code>nano</code>、<code>small</code>、<code>medium</code>、<code>large</code>、<code>x-large</code>三种规模大小的模型</li>
-<li><code>backbone</code>就是模型的主干网络。他的基本书写方法为<code>-[from、repeats、modules、orgs]</code>
-<ul>
-<li><code>from</code>：来源是什么：若是<code>-1</code>表示上一层的输出为当前层的输入、若是其他数据<code>x</code>表示第<code>x</code>层的输出为当前层的输入。</li>
-<li><code>repeats</code>；表示该模块重复的次数</li>
-<li><code>module</code>：表示模块的名称</li>
-<li><code>orgs</code>：表示该模块初始化的时候需要传入的参数、需要和模块定义的结构体相匹配</li>
-</ul>
-</li>
-<li><code>head</code>是模型的检测头网络结构</li>
-</ul>
-<h3 id="1-1-2-模型模块等定义">1.1.2.模型模块等定义</h3>
+<p>对此AlexNet就沿用了猛拉深度的思想，采用了八层网络架构来实现这个模型。</p>
 <blockquote>
-<p>再来就是确定各种模块的定义问题了。</p>
+<p>为什么人家不用超深的网络呢，实际上哈经济基础决定上层建筑，当时的GPU性能很低，就连AlexNet我们现在认为特别不行的模块都需要训练整整三天而且用了两个GPU才完成的。</p>
+<p>可见技术的发展并不仅仅是软件算法的层面更是工业以及硬件等的整体提升。</p>
 </blockquote>
-<p>模型的所有模块均保存在该文件夹之中：<code>ultralytics-main\ultralytics\nn\modules</code></p>
-<p>其中包括了：检测头文件<code>head</code>、激活函数文件<code>activation</code>、模块文件<code>block</code>、卷积文件<code>conv</code>等等。</p>
-<p>以后如果需要修改或者增加模块，那么这个文件是绕不开的。</p>
-<h1>2.模块增加或者是修改的方式</h1>
-<blockquote>
-<p>这里用一个比较简单的注意力机制模块为例子说明。</p>
-</blockquote>
-<ol>
-<li>
-<p>打开<code>ultralytics-main\ultralytics\nn\modules\block.py</code>文件，我们需要在这里面将自己的模块进行定义。写进去即可<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143436823.png"
-                      alt="image-20260318141028419"
-                ></p>
-</li>
-<li>
-<p>在<code>ultralytics-main\ultralytics\nn\modules\__init__.py</code>文件中将上面定义的模块进行两次申明</p>
-<ol>
-<li>
-<p>在<code>from .block import (</code>中进行申明<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143442748.png"
-                      alt="image-20260318141342476"
-                ></p>
-</li>
-<li>
-<p>在<code>__all__ = (</code>中进行申明</p>
+<p>论文的引言部分也说到：“最后，网络的大小主要受到当前<em>GPU</em>上可用内存量以及我们愿意容忍的训练时间的限制。 我们的网络需要<em>5</em>到<em>6</em>天的时间在两个 <em>GTX 580 3GB GPU</em>上进行训练。 我们所有的实验都表明，只需等待更快<em>GPU</em>和更大的数据集可用，我们的结果就可以得到改善”。</p>
+<hr>
+<h1>2 模型结构</h1>
+<p>为了提高训练的精度<em>AlexNet</em>使用了当时最大的深度，整整使用了八层进行训练。其中包括五个卷积层以及三个线性层。如下图所示。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143444525.png"
-                      alt="image-20260318141502880"
+                     data-src="assets/3693258-20260119215536103-462733085.png"
+                      alt="image-20260119215534053"
                 ></p>
-</li>
-</ol>
-</li>
-<li>
-<p>在<code>ultralytics-main\ultralytics\nn\tasks.py</code>中也需要进行两次申明</p>
+<p>不知道大家有没有发现，这个网络结构的上半部分好像被截断了，感觉像是截图的有些问题一样。实际上并非如此，如此绘制是由它自己的一些想法的。当时的<em>GPU</em>算例较低，因此只可以进行双<em>GPU</em>训练的方式，那么两个<em>GPU</em>训练自然就与两个通道啦。</p>
+<p>那么根据这个图片我们就可以使用自己的语言来说一下他整体的结构框架。该模型总共包括了八层，其中有五个卷积层和三个线性层：</p>
+<blockquote>
+<p>这个网络架构主要基于<em>ImageNet</em>数据集的，该数据集的图片大小是三通道彩色图片。</p>
+</blockquote>
 <ol>
-<li>
-<p>在最上面的<code>from ultralytics.nn.modules import (</code>中进行第一次申明<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143448863.png"
-                      alt="image-20260318141703467"
-                ></p>
-</li>
-<li>
-<p>在后面的<code>  base_modules = frozenset(</code>中进行第二次申明</p>
+<li>该层卷积的卷积核大小为<em>11</em>，步长为<em>4</em>，填充为<em>2</em>。并且总共有<em>96</em>个卷积核。实现下采样的功能。</li>
+<li>该层卷积的卷积核大小为<em>5</em>，步长为<em>1</em>，填充为<em>2</em>.并且总共有<em>256</em>个卷积核。实现特征的提取。</li>
+<li>该层卷积的卷积核大小为<em>3</em>，步长为<em>1</em>，填充为<em>1</em>，并且总共有<em>384</em>个卷积核。实现特征的提取。</li>
+<li>该层卷积的卷积核大小为3，步长为<em>1</em>，填充为1，并且总共有<em>384</em>个卷积核。实现特征的提取。</li>
+<li>该层卷积的卷积核大小为<em>3</em>，步长为1，填充为<em>1</em>，并且总共有<em>256</em>个卷积核。实现特征的提取。</li>
+<li>该线性层的输入数据为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mn>5</mn><mn>6</mn><mo>×</mo><mn>6</mn><mo>×</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">256\times 6\times 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">5</span><span class="mord mathrm">6</span><span class="mbin">×</span><span class="mord mathrm">6</span><span class="mbin">×</span><span class="mord mathrm">6</span></span></span></span>，输出数据为2048。</li>
+<li>该线性层的输入数据为2048，输出数据为2048。</li>
+<li>该线性层的输入数据为2048，输出数据为1000。</li>
+</ol>
+<blockquote>
+<p>[!CAUTION]</p>
+<p>注意，上面的*(1，2)<em>层卷积层后面需要更上一组最大池化层</em>MaxPool*，最大池化层的参数在论文的4.4节提到，采用kernel=3，stride=2的池化方式。</p>
+<p>其次在进入线性层之前，需要引入<em>DropOut</em>机制函数，尽可能避免出现过拟合的情况出现。</p>
+</blockquote>
+<p>最后在网络结构这里，我们还需要站在当时的角度来看看这篇文章在当时最强的地方是什么：<br>
+我们认为他最强的地方莫过于提出了一种非线性函数作为激活函数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>e</mi><mi>L</mi><mi>U</mi><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mn>0</mn><mo separator="true">,</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">ReLU=max(0,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mord mathit">e</span><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mrel">=</span><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span>，这个函数长得非常的简单。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143452186.png"
-                      alt="image-20260318141745338"
+                     data-src="assets/3693258-20260120094414990-1417576373.png"
+                      alt="image-20260120094410597"
                 ></p>
-</li>
-</ol>
-</li>
-<li>
-<p>最后在<code>ultralytics-main\ultralytics\cfg\models\11</code>中重新修改自己的模型架构即可，具体的修改方法，可以参考<em>人工智能</em>。<br>
-<img  
+<p>大道至简，这个函数成为现在最常用的激活函数没有之一！</p>
+<hr>
+<h1>3 模型框架代码</h1>
+<p>那么单个GPU的网络架构如下图所示。</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143440798.png"
-                      alt="image-20260318141916562"
+                     data-src="assets/3693258-20260120095709283-1409704673.png"
+                      alt="image-20260120095705594"
                 ></p>
-</li>
-<li>
-<p>然后就可以运行自己的代码了。</p>
-<ol>
-<li>
-<p>在根目录之下创建自己的模型<code>test.py</code></p>
-</li>
-<li>
-<p>在测试文件之中输入代码</p>
- <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    yolo = YOLO(填写你刚刚搞定的yaml文件的路径)</span><br><span class="line">    yolo.train(</span><br><span class="line">        data=填写你的数据集的路径,</span><br><span class="line">        project=填写你最后结果保存的路径,</span><br><span class="line">        epochs=<span class="number">150</span>,</span><br><span class="line">        imgsz=<span class="number">640</span>,</span><br><span class="line">        batch=<span class="number">16</span>,</span><br><span class="line">        lr0 = <span class="number">0.01</span>,</span><br><span class="line">        momentum = <span class="number">0.937</span>,</span><br><span class="line">        weight_decay = <span class="number">0.0005</span>,</span><br><span class="line">        optimizer=<span class="string">&#x27;SGD&#x27;</span>,</span><br><span class="line">        device=<span class="number">0</span>  <span class="comment"># CPU 则改为 &#x27;cpu&#x27;</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-</li>
-</ol>
+<p>有了这个架构我们就可以进行AlexNet的代码编程。这里主要使用的是<em>Pytorch</em>框架进行撰写</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torchvision </span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms, datasets</span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> torch.cuda.amp <span class="keyword">import</span> autocast, GradScaler</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AlexNet</span>(nn.Module):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;AlexNet 神经网络模块,这里就不再分两个GPU训练了,直接写在单个GPU上面进行训练</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self , num_classes= <span class="number">20</span></span>):</span><br><span class="line">        <span class="built_in">super</span>(AlexNet , <span class="variable language_">self</span>).__init__()</span><br><span class="line">        <span class="comment"># input size = 224*224*3</span></span><br><span class="line">        <span class="variable language_">self</span>.Conv1 = nn.Conv2d(in_channels = <span class="number">3</span> , out_channels = <span class="number">96</span> , kernel_size = <span class="number">11</span> , stride = <span class="number">4</span> , padding = <span class="number">2</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu1 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.maxpool1 = nn.MaxPool2d(kernel_size=<span class="number">3</span> , stride = <span class="number">2</span>) </span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 27*27*96</span></span><br><span class="line">        <span class="variable language_">self</span>.Conv2 = nn.Conv2d(in_channels = <span class="number">96</span> , out_channels = <span class="number">256</span> , kernel_size=<span class="number">5</span> , stride=<span class="number">1</span> , padding = <span class="number">2</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu2 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.maxpool2 = nn.MaxPool2d(kernel_size = <span class="number">3</span> , stride = <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 13*13*256</span></span><br><span class="line">        <span class="variable language_">self</span>.Conv3 = nn.Conv2d(in_channels = <span class="number">256</span> , out_channels = <span class="number">192</span>*<span class="number">2</span> , kernel_size= <span class="number">3</span> , stride = <span class="number">1</span> , padding = <span class="number">1</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu3 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 13*13*384</span></span><br><span class="line">        <span class="variable language_">self</span>.Conv4 = nn.Conv2d(in_channels = <span class="number">384</span> , out_channels=<span class="number">384</span> , kernel_size = <span class="number">3</span> , stride=<span class="number">1</span> , padding=<span class="number">1</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu4 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 13*13*384</span></span><br><span class="line">        <span class="variable language_">self</span>.Conv5 = nn.Conv2d(in_channels = <span class="number">384</span> , out_channels =<span class="number">256</span> , kernel_size = <span class="number">3</span> , stride = <span class="number">1</span> , padding = <span class="number">1</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu5 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.maxpool3 = nn.MaxPool2d(kernel_size = <span class="number">3</span> , stride = <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.avgpool = nn.AdaptiveAvgPool2d((<span class="number">6</span>,<span class="number">6</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 6*6*256</span></span><br><span class="line">        <span class="variable language_">self</span>.dropout1 = nn.Dropout(p=<span class="number">0.5</span>)</span><br><span class="line">        <span class="variable language_">self</span>.fc1 = nn.Linear(in_features = <span class="number">256</span>*<span class="number">6</span>*<span class="number">6</span> , out_features=<span class="number">2048</span> , bias = <span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Relu6 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 2048</span></span><br><span class="line">        <span class="variable language_">self</span>.fc2 = nn.Linear(in_features=<span class="number">2048</span> , out_features=<span class="number">2048</span> , bias = <span class="literal">True</span>) </span><br><span class="line">        <span class="variable language_">self</span>.Relu7 = nn.ReLU(inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.dropout2 = nn.Dropout(p=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># input size = 2048</span></span><br><span class="line">        <span class="variable language_">self</span>.fc3 = nn.Linear(in_features=<span class="number">2048</span> , out_features=num_classes , bias = <span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.Softmax = nn.Softmax(dim=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self , x</span>):</span><br><span class="line">        x = <span class="variable language_">self</span>.Conv1(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu1(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.maxpool1(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.Conv2(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu2(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.maxpool2(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.Conv3(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu3(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.Conv4(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu4(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.Conv5(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu5(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.maxpool3(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.avgpool(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.dropout1(x)</span><br><span class="line"></span><br><span class="line">        x = x.view(x.size(<span class="number">0</span>) , -<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.fc1(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu6(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.fc2(x)</span><br><span class="line">        x = <span class="variable language_">self</span>.Relu7(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.dropout2(x)</span><br><span class="line"></span><br><span class="line">        x = <span class="variable language_">self</span>.fc3(x)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure></div>
 
 		</div>
 
@@ -497,18 +445,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> YOLO增加模块的方式</li>
+        <li><strong>标题:</strong> AlexNet</li>
         <li><strong>作者:</strong> AxonoSensei</li>
         <li><strong>创建于
-                :</strong> 2026-03-19 20:24:59</li>
+                :</strong> 2026-03-20 16:08:18</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2026-03-19 20:26:13
+                    :</strong> 2026-03-20 16:11:01
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2026/03/19/YOLO增加模块的方式/
+            <strong>链接:</strong> https://redefine.ohevan.com/2026/03/20/AlexNet/
         </li>
         <li>
             <strong>
@@ -530,7 +478,7 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/YOLO/">#YOLO</a>&nbsp;
+				<a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/">#深度学习入门</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -541,23 +489,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2026/03/19/hexo-%E5%9C%A8github%E4%B8%8A%E7%9A%84%E6%96%87%E7%AB%A0%E4%B8%8A%E4%BC%A0%E9%97%AE%E9%A2%98/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">hexo 在github上的文章上传问题</span>
-						<span class="post-nav-item">上一篇</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2026/03/18/hello-world/">
+				<a class="next" rel="next" href="/2026/03/20/LeNet-5/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">Hello World</span>
+						<span class="post-nav-title-item truncate max-w-48">LeNet-5</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -640,8 +576,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">YOLO增加模块的方式</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B7%AF%E5%BE%84%E4%B8%8B%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="nav-text">1.路径下重要文件说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E7%94%B3%E6%98%8E"><span class="nav-text">1.1.模型文件申明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%A8%A1%E5%9E%8B%E6%A8%A1%E5%9D%97%E7%AD%89%E5%AE%9A%E4%B9%89"><span class="nav-text">1.1.2.模型模块等定义</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2.模块增加或者是修改的方式</span></a>
+		<div class="page-title">AlexNet</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1 模型背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2 模型结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">3 模型框架代码</span></a></li></ol>
 
 	</div>
 </div>
