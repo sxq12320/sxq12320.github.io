@@ -369,10 +369,9 @@
 			<p>首先需要从官方的GitHub库内下载yolo的全部代码。</p>
 <p>这个就是官方的下载链接：<a class="link" target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics">Github仓库链接地址 <i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143430788.png" alt="image-20260318134534056">
+
 <p>下载完毕之后，我们使用自己的编译器将整个代码进行打开，打开的是整个文件夹。现在假设文件夹的名称为**<em>ultralytics-main</em>。**在这个基础上进行路径的修改和说明</p>
-<h2 id="1-路径下重要文件说明"><strong>1.路径下重要文件说明</strong></h2>
-<h3 id="1-1-模型文件申明">1.1.模型文件申明</h3>
-<blockquote>
+<h2 id="1-路径下重要文件说明"><a href="#1-路径下重要文件说明" class="headerlink" title="1.路径下重要文件说明"></a><strong>1.路径下重要文件说明</strong></h2><h3 id="1-1-模型文件申明"><a href="#1-1-模型文件申明" class="headerlink" title="1.1.模型文件申明"></a>1.1.模型文件申明</h3><blockquote>
 <p>首先就是这整个文件夹中最重要的模型文件架构，官方的代码库中的模型文件，并不是保存成<code>python</code>文件，而是使用<code>yaml</code>文件进行保存的。</p>
 </blockquote>
 <p>其地址位于：<code>ultralytics-main\ultralytics\cfg\models</code></p>
@@ -381,8 +380,7 @@
 <ul>
 <li><code>nc</code>：表示类别的数量。该模型的主要用途是图像目标检测，nc的目的就是确定检测的数量多少</li>
 <li><code>scales</code>：表示模型的缩放系数。里面的模型架构从小到大包括了<code>nano</code>、<code>small</code>、<code>medium</code>、<code>large</code>、<code>x-large</code>三种规模大小的模型</li>
-<li><code>backbone</code>就是模型的主干网络。他的基本书写方法为<code>-[from、repeats、modules、orgs]</code>
-<ul>
+<li><code>backbone</code>就是模型的主干网络。他的基本书写方法为<code>-[from、repeats、modules、orgs]</code><ul>
 <li><code>from</code>：来源是什么：若是<code>-1</code>表示上一层的输出为当前层的输入、若是其他数据<code>x</code>表示第<code>x</code>层的输出为当前层的输入。</li>
 <li><code>repeats</code>；表示该模块重复的次数</li>
 <li><code>module</code>：表示模块的名称</li>
@@ -391,62 +389,44 @@
 </li>
 <li><code>head</code>是模型的检测头网络结构</li>
 </ul>
-<h3 id="1-1-2-模型模块等定义">1.1.2.模型模块等定义</h3>
-<blockquote>
+<h3 id="1-1-2-模型模块等定义"><a href="#1-1-2-模型模块等定义" class="headerlink" title="1.1.2.模型模块等定义"></a>1.1.2.模型模块等定义</h3><blockquote>
 <p>再来就是确定各种模块的定义问题了。</p>
 </blockquote>
 <p>模型的所有模块均保存在该文件夹之中：<code>ultralytics-main\ultralytics\nn\modules</code></p>
 <p>其中包括了：检测头文件<code>head</code>、激活函数文件<code>activation</code>、模块文件<code>block</code>、卷积文件<code>conv</code>等等。</p>
 <p>以后如果需要修改或者增加模块，那么这个文件是绕不开的。</p>
-<h1>2.模块增加或者是修改的方式</h1>
-<blockquote>
+<h1 id="2-模块增加或者是修改的方式"><a href="#2-模块增加或者是修改的方式" class="headerlink" title="2.模块增加或者是修改的方式"></a>2.模块增加或者是修改的方式</h1><blockquote>
 <p>这里用一个比较简单的注意力机制模块为例子说明。</p>
 </blockquote>
 <ol>
-<li>
-<p>打开<code>ultralytics-main\ultralytics\nn\modules\block.py</code>文件，我们需要在这里面将自己的模块进行定义。写进去即可<br>
-<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143436823.png" alt="image-20260318141028419"></p>
+<li><p>打开<code>ultralytics-main\ultralytics\nn\modules\block.py</code>文件，我们需要在这里面将自己的模块进行定义。写进去即可<br> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143436823.png" alt="image-20260318141028419"></p>
 </li>
-<li>
-<p>在<code>ultralytics-main\ultralytics\nn\modules\__init__.py</code>文件中将上面定义的模块进行两次申明</p>
+<li><p>在<code>ultralytics-main\ultralytics\nn\modules\__init__.py</code>文件中将上面定义的模块进行两次申明</p>
 <ol>
-<li>
-<p>在<code>from .block import (</code>中进行申明<br>
-<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143442748.png" alt="image-20260318141342476"></p>
+<li><p>在<code>from .block import (</code>中进行申明<br> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143442748.png" alt="image-20260318141342476"></p>
 </li>
-<li>
-<p>在<code>__all__ = (</code>中进行申明</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143444525.png" alt="image-20260318141502880"></p>
+<li><p>在<code>__all__ = (</code>中进行申明</p>
+<p> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143444525.png" alt="image-20260318141502880"></p>
 </li>
 </ol>
 </li>
-<li>
-<p>在<code>ultralytics-main\ultralytics\nn\tasks.py</code>中也需要进行两次申明</p>
+<li><p>在<code>ultralytics-main\ultralytics\nn\tasks.py</code>中也需要进行两次申明</p>
 <ol>
-<li>
-<p>在最上面的<code>from ultralytics.nn.modules import (</code>中进行第一次申明<br>
-<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143448863.png" alt="image-20260318141703467"></p>
+<li><p>在最上面的<code>from ultralytics.nn.modules import (</code>中进行第一次申明<br> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143448863.png" alt="image-20260318141703467"></p>
 </li>
-<li>
-<p>在后面的<code>  base_modules = frozenset(</code>中进行第二次申明</p>
-<p><img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143452186.png" alt="image-20260318141745338"></p>
+<li><p>在后面的<code>  base_modules = frozenset(</code>中进行第二次申明</p>
+<p> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143452186.png" alt="image-20260318141745338"></p>
 </li>
 </ol>
 </li>
-<li>
-<p>最后在<code>ultralytics-main\ultralytics\cfg\models\11</code>中重新修改自己的模型架构即可，具体的修改方法，可以参考<em>人工智能</em>。<br>
-<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143440798.png" alt="image-20260318141916562"></p>
+<li><p>最后在<code>ultralytics-main\ultralytics\cfg\models\11</code>中重新修改自己的模型架构即可，具体的修改方法，可以参考<em>人工智能</em>。<br> <img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143440798.png" alt="image-20260318141916562"></p>
 </li>
-<li>
-<p>然后就可以运行自己的代码了。</p>
+<li><p>然后就可以运行自己的代码了。</p>
 <ol>
-<li>
-<p>在根目录之下创建自己的模型<code>test.py</code></p>
+<li><p>在根目录之下创建自己的模型<code>test.py</code></p>
 </li>
-<li>
-<p>在测试文件之中输入代码</p>
- <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    yolo = YOLO(填写你刚刚搞定的yaml文件的路径)</span><br><span class="line">    yolo.train(</span><br><span class="line">        data=填写你的数据集的路径,</span><br><span class="line">        project=填写你最后结果保存的路径,</span><br><span class="line">        epochs=<span class="number">150</span>,</span><br><span class="line">        imgsz=<span class="number">640</span>,</span><br><span class="line">        batch=<span class="number">16</span>,</span><br><span class="line">        lr0 = <span class="number">0.01</span>,</span><br><span class="line">        momentum = <span class="number">0.937</span>,</span><br><span class="line">        weight_decay = <span class="number">0.0005</span>,</span><br><span class="line">        optimizer=<span class="string">&#x27;SGD&#x27;</span>,</span><br><span class="line">        device=<span class="number">0</span>  <span class="comment"># CPU 则改为 &#x27;cpu&#x27;</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure></div>
-</li>
+<li><p>在测试文件之中输入代码</p>
+ <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    yolo = YOLO(填写你刚刚搞定的yaml文件的路径)</span><br><span class="line">    yolo.train(</span><br><span class="line">        data=填写你的数据集的路径,</span><br><span class="line">        project=填写你最后结果保存的路径,</span><br><span class="line">        epochs=<span class="number">150</span>,</span><br><span class="line">        imgsz=<span class="number">640</span>,</span><br><span class="line">        batch=<span class="number">16</span>,</span><br><span class="line">        lr0 = <span class="number">0.01</span>,</span><br><span class="line">        momentum = <span class="number">0.937</span>,</span><br><span class="line">        weight_decay = <span class="number">0.0005</span>,</span><br><span class="line">        optimizer=<span class="string">&#x27;SGD&#x27;</span>,</span><br><span class="line">        device=<span class="number">0</span>  <span class="comment"># CPU 则改为 &#x27;cpu&#x27;</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure></div></li>
 </ol>
 </li>
 </ol>
@@ -601,7 +581,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">YOLO增加模块的方式</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B7%AF%E5%BE%84%E4%B8%8B%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="nav-text">1.路径下重要文件说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E7%94%B3%E6%98%8E"><span class="nav-text">1.1.模型文件申明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%A8%A1%E5%9E%8B%E6%A8%A1%E5%9D%97%E7%AD%89%E5%AE%9A%E4%B9%89"><span class="nav-text">1.1.2.模型模块等定义</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2.模块增加或者是修改的方式</span></a>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B7%AF%E5%BE%84%E4%B8%8B%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="nav-text">1.路径下重要文件说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E7%94%B3%E6%98%8E"><span class="nav-text">1.1.模型文件申明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-%E6%A8%A1%E5%9E%8B%E6%A8%A1%E5%9D%97%E7%AD%89%E5%AE%9A%E4%B9%89"><span class="nav-text">1.1.2.模型模块等定义</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%A8%A1%E5%9D%97%E5%A2%9E%E5%8A%A0%E6%88%96%E8%80%85%E6%98%AF%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-text">2.模块增加或者是修改的方式</span></a>
 
 	</div>
 </div>
