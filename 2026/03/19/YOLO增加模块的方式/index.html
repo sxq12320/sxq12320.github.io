@@ -367,13 +367,8 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<p>首先需要从官方的GitHub库内下载yolo的全部代码。</p>
-<p>这个就是官方的下载链接：<a class="link"   target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics" >Github仓库链接地址 <i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143430788.png"
-                      alt="image-20260318134534056"  
-                >
+<p>这个就是官方的下载链接：<a class="link" target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics">Github仓库链接地址 <i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143430788.png" alt="image-20260318134534056">
 <p>下载完毕之后，我们使用自己的编译器将整个代码进行打开，打开的是整个文件夹。现在假设文件夹的名称为**<em>ultralytics-main</em>。**在这个基础上进行路径的修改和说明</p>
 <h2 id="1-路径下重要文件说明"><strong>1.路径下重要文件说明</strong></h2>
 <h3 id="1-1-模型文件申明">1.1.模型文件申明</h3>
@@ -381,12 +376,7 @@
 <p>首先就是这整个文件夹中最重要的模型文件架构，官方的代码库中的模型文件，并不是保存成<code>python</code>文件，而是使用<code>yaml</code>文件进行保存的。</p>
 </blockquote>
 <p>其地址位于：<code>ultralytics-main\ultralytics\cfg\models</code></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143432601.png"
-                      alt="image-20260318135230683"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143432601.png" alt="image-20260318135230683"></p>
 <p>上面这张图片就是<code>yolo11</code>模型的架构，现在将逐个说明相关的参数：</p>
 <ul>
 <li><code>nc</code>：表示类别的数量。该模型的主要用途是图像目标检测，nc的目的就是确定检测的数量多少</li>
@@ -415,33 +405,18 @@
 <ol>
 <li>
 <p>打开<code>ultralytics-main\ultralytics\nn\modules\block.py</code>文件，我们需要在这里面将自己的模块进行定义。写进去即可<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143436823.png"
-                      alt="image-20260318141028419"
-                ></p>
+<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143436823.png" alt="image-20260318141028419"></p>
 </li>
 <li>
 <p>在<code>ultralytics-main\ultralytics\nn\modules\__init__.py</code>文件中将上面定义的模块进行两次申明</p>
 <ol>
 <li>
 <p>在<code>from .block import (</code>中进行申明<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143442748.png"
-                      alt="image-20260318141342476"
-                ></p>
+<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143442748.png" alt="image-20260318141342476"></p>
 </li>
 <li>
 <p>在<code>__all__ = (</code>中进行申明</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143444525.png"
-                      alt="image-20260318141502880"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143444525.png" alt="image-20260318141502880"></p>
 </li>
 </ol>
 </li>
@@ -450,32 +425,17 @@
 <ol>
 <li>
 <p>在最上面的<code>from ultralytics.nn.modules import (</code>中进行第一次申明<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143448863.png"
-                      alt="image-20260318141703467"
-                ></p>
+<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143448863.png" alt="image-20260318141703467"></p>
 </li>
 <li>
 <p>在后面的<code>  base_modules = frozenset(</code>中进行第二次申明</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143452186.png"
-                      alt="image-20260318141745338"
-                ></p>
+<p><img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143452186.png" alt="image-20260318141745338"></p>
 </li>
 </ol>
 </li>
 <li>
 <p>最后在<code>ultralytics-main\ultralytics\cfg\models\11</code>中重新修改自己的模型架构即可，具体的修改方法，可以参考<em>人工智能</em>。<br>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143440798.png"
-                      alt="image-20260318141916562"
-                ></p>
+<img lazyload src="/images/loading.svg" data-src="https://raw.githubusercontent.com/sxq12320/typora_book/main//img_20260318143440798.png" alt="image-20260318141916562"></p>
 </li>
 <li>
 <p>然后就可以运行自己的代码了。</p>
